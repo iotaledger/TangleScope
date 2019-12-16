@@ -290,3 +290,8 @@ confirmationratecollector:
 - confirmationratecollector_confirmation_rate_api (Confirmation rate ratio [0,1] as it is perceived by making api calls to "getInclusionStates") [Gauge]  
 
 - confirmationratecollector_confirmation_rate_zmq (Confirmation rate ratio [0,1] as it is perceived by inspecting the zmq stream) [Gauge]
+
+Contributing
+=================================
+
+Please read [CONTRIBUTING.md](https://github.com/iotaledger/TangleScope/blob/master/CONTRIBUTING.md) for details.

@@ -18,8 +18,6 @@ cc_library(
     hdrs = ["api_json.h"],
     deps = [
         ":api",
-        "@org_iota_common//common/helpers:digest",
-        "@org_iota_common//common/model:tryte_transaction",
         "@boost//:config",
         "@boost//:core",
         "@boost//:fusion",
@@ -29,6 +27,8 @@ cc_library(
         "@com_github_gflags_gflags//:gflags",
         "@com_github_google_glog//:glog",
         "@nlohmann//:json",
+        "@org_iota_common//common/helpers:digest",
+        "@org_iota_common//common/model:tryte_transaction",
     ],
 )
 

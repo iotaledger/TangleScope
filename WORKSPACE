@@ -17,4 +17,5 @@ git_repository(
 )
 
 load("@rules_iota//:defs.bzl", "iota_deps")
+
 iota_deps()
