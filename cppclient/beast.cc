@@ -127,7 +127,10 @@ nonstd::optional<json> BeastIotaAPI::postSsl(const json& input) {
 
     stream.shutdown(ec);
 
-    if (ec && ec != boost::system::errc::not_connected) throw boost::system::system_error{ec};
+    if (ec && ec != boost::system::errc::not_connected &&
+            ec != ssl::error::stream_truncated &&
+            ec != http::error::end_of_stream)
+        throw boost::system::system_error{ec};
   } catch (const std::exception& ex) {
     LOG(ERROR) << ex.what();
     return {};
